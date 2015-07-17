@@ -1,5 +1,5 @@
 {
-  "name": "react-component-template",
+  "name": "react-interval",
   "version": "1.0.0",
   "description": "React component",
   "main": "lib/index.js",
@@ -20,19 +20,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkbt/react-component-template.git"
+    "url": "https://github.com/nkbt/react-interval.git"
   },
   "keywords": [
     "component",
     "react-component",
-    "react"
+    "react",
+    "interval",
+    "timer",
+    "timeout",
+    "setTimeout",
+    "setInterval",
+    "repeater"
   ],
   "author": "Nik Butenko <nik@butenko.me> (http://butenko.me/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nkbt/react-component-template/issues"
+    "url": "https://github.com/nkbt/react-interval/issues"
   },
-  "homepage": "https://github.com/nkbt/react-component-template",
+  "homepage": "https://github.com/nkbt/react-interval",
   "dependencies": {
     "react": "^0.13.3"
   },

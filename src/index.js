@@ -1,4 +1,4 @@
-import Component from './Component';
+import ReactInterval from './ReactInterval';
 
 
-export default Component;
+export default ReactInterval;
