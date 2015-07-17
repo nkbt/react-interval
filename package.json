@@ -1,7 +1,7 @@
 {
   "name": "react-interval",
   "version": "1.0.0",
-  "description": "React component",
+  "description": "Safe React wrapper for setInterval",
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run build:clean && npm run build:lib && npm run build:example",
