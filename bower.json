@@ -1,22 +1,28 @@
 {
-  "name": "react-component-template",
-  "version": "1.0.0",
-  "description": "React component",
-  "main": "react-component-template.js",
+  "name": "react-interval",
+  "version": "1.0.3",
+  "description": "Safe React wrapper for setInterval",
+  "main": "react-interval.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bower-registry/react-component-template.git"
+    "url": "https://github.com/bower-registry/react-interval.git"
   },
   "keywords": [
     "component",
     "react-component",
-    "react"
+    "react",
+    "interval",
+    "timer",
+    "timeout",
+    "setTimeout",
+    "setInterval",
+    "repeater"
   ],
   "authors": [
     "Nik Butenko <nik@butenko.me> (http://butenko.me/)"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/nkbt/react-component-template",
+  "homepage": "https://github.com/nkbt/react-interval",
   "dependencies": {
     "react": "^0.13.3"
   },
