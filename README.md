@@ -10,10 +10,17 @@ Safe React wrapper for setInterval
 
 ## Installation
 
-```bash
+### npm
+
+```sh
 npm install --save react-interval
 ```
 
+### bower
+
+```sh
+bower install --save react-interval
+```
 
 ## Usage
 
@@ -98,12 +105,6 @@ React.render(<App />, document.body);
 ## Options
 
 
-
-    callback: React.PropTypes.func.isRequired,
-    enabled: React.PropTypes.bool,
-    timeout: React.PropTypes.number
-    
-    
 #### `callback`: PropTypes.func.isRequired
 
 Function repeatedly called after timeout
@@ -135,6 +136,17 @@ open http://localhost:8080
 ## Demo
 
 [http://nkbt.github.io/react-interval/example](http://nkbt.github.io/react-interval/example)
+
+
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/ZGmpoO](http://codepen.io/nkbt/pen/ZGmpoO?editors=101)
+
+
+## Tests
+
+Only UI tests for now, see [demo](http://nkbt.github.io/react-interval/example)
 
 
 ## License
