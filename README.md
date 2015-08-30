@@ -9,6 +9,10 @@
 
 Safe React wrapper for setInterval 
 
+
+![React Interval](https://cdn.rawgit.com/nkbt/react-interval/master/src/example/react-interval.gif)
+
+
 ## Installation
 
 ### npm
@@ -22,6 +26,14 @@ npm install --save react-interval
 ```sh
 bower install --save react-interval
 ```
+
+## Demo
+
+[http://nkbt.github.io/react-interval/example](http://nkbt.github.io/react-interval/example)
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/ZGmpoO](http://codepen.io/nkbt/pen/ZGmpoO?editors=101)
 
 ## Usage
 
@@ -133,17 +145,6 @@ Then
 ```bash
 open http://localhost:8080
 ```
-
-## Demo
-
-[http://nkbt.github.io/react-interval/example](http://nkbt.github.io/react-interval/example)
-
-
-
-## Codepen demo
-
-[http://codepen.io/nkbt/pen/ZGmpoO](http://codepen.io/nkbt/pen/ZGmpoO?editors=101)
-
 
 ## Tests
 
