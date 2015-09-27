@@ -18,9 +18,6 @@ const ReactInterval = React.createClass({
   },
 
 
-  shouldComponentUpdate,
-
-
   getInitialState() {
     return {enabled: this.props.enabled};
   },
@@ -33,13 +30,16 @@ const ReactInterval = React.createClass({
   },
 
 
-  componentWillUnmount() {
-    this.stop();
+  componentWillReceiveProps({enabled}) {
+    this.setState({enabled});
   },
 
 
-  componentWillReceiveProps({enabled}) {
-    this.setState({enabled});
+  shouldComponentUpdate,
+
+
+  componentWillUnmount() {
+    this.stop();
   },
 
 
