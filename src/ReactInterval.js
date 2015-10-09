@@ -1,5 +1,5 @@
 import React from 'react';
-import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
+import {shouldComponentUpdate} from 'react-addons-pure-render-mixin';
 
 
 const ReactInterval = React.createClass({
