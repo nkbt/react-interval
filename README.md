@@ -64,9 +64,6 @@ const App = React.createClass({
     );
   }
 });
-
-
-React.render(<App />, document.body);
 ```
 
 ### Full example
@@ -110,9 +107,6 @@ const App = React.createClass({
     );
   }
 });
-
-
-React.render(<App />, document.body);
 ```
 
 ## Options
