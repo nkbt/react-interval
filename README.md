@@ -42,7 +42,6 @@ Start counting on render
 
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactInterval from 'react-interval';
 
 const App = React.createClass({
@@ -65,9 +64,6 @@ const App = React.createClass({
     );
   }
 });
-
-
-ReactDOM.render(<App />, appRoot);
 ```
 
 ### Full example
@@ -75,7 +71,6 @@ Chang timeout on the fly, start and stop counting
 
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactInterval from 'react-interval';
 
 const App = React.createClass({
@@ -112,9 +107,6 @@ const App = React.createClass({
     );
   }
 });
-
-
-ReactDOM.render(<App />, appRoot);
 ```
 
 ## Options
