@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactInterval from '..';
+import ReactInterval from '../ReactInterval';
 
 
 const App = React.createClass({

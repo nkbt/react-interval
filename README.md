@@ -2,12 +2,13 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-interval.svg?style=svg)](https://circleci.com/gh/nkbt/react-interval)
-[![Coverage Status](https://coveralls.io/repos/nkbt/react-interval/badge.svg?branch=master)](https://coveralls.io/r/nkbt/react-interval?branch=master)
-[![Dependency Status](https://david-dm.org/nkbt/react-interval.svg)](https://david-dm.org/nkbt/react-interval)
-[![devDependency Status](https://david-dm.org/nkbt/react-interval/dev-status.svg)](https://david-dm.org/nkbt/react-interval#info=devDependencies)
+[![Circle CI](https://circleci.com/gh/nkbt/react-component-template.svg?style=shield)](https://circleci.com/gh/nkbt/react-component-template)
+[![Appveyor](https://ci.appveyor.com/api/projects/status/mql8v50s8ghr0w1q?svg=true)](https://ci.appveyor.com/project/nkbt/react-component-template)
+[![codecov.io](https://codecov.io/github/nkbt/react-component-template/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-component-template?branch=master)
+[![Dependency Status](https://david-dm.org/nkbt/react-component-template.svg)](https://david-dm.org/nkbt/react-component-template)
+[![devDependency Status](https://david-dm.org/nkbt/react-component-template/dev-status.svg)](https://david-dm.org/nkbt/react-component-template#info=devDependencies)
 
-Safe React wrapper for setInterval 
+Safe React wrapper for setInterval
 
 
 ![React Interval](https://cdn.rawgit.com/nkbt/react-interval/master/src/example/react-interval.gif)
@@ -134,7 +135,7 @@ npm install
 npm start
 ```
 
-Then 
+Then
 
 ```bash
 open http://localhost:8080
