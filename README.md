@@ -2,31 +2,58 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-component-template.svg?style=shield)](https://circleci.com/gh/nkbt/react-component-template)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/mql8v50s8ghr0w1q?svg=true)](https://ci.appveyor.com/project/nkbt/react-component-template)
-[![codecov.io](https://codecov.io/github/nkbt/react-component-template/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-component-template?branch=master)
-[![Dependency Status](https://david-dm.org/nkbt/react-component-template.svg)](https://david-dm.org/nkbt/react-component-template)
-[![devDependency Status](https://david-dm.org/nkbt/react-component-template/dev-status.svg)](https://david-dm.org/nkbt/react-component-template#info=devDependencies)
+[![Circle CI](https://circleci.com/gh/nkbt/react-interval.svg?style=shield)](https://circleci.com/gh/nkbt/react-interval)
+[![Appveyor](https://ci.appveyor.com/api/projects/status/iq9ny700mnemkq6v?svg=true)](https://ci.appveyor.com/project/nkbt/react-interval)
+[![codecov.io](https://codecov.io/github/nkbt/react-interval/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-interval?branch=master)
+[![Dependency Status](https://david-dm.org/nkbt/react-interval.svg)](https://david-dm.org/nkbt/react-interval)
+[![devDependency Status](https://david-dm.org/nkbt/react-interval/dev-status.svg)](https://david-dm.org/nkbt/react-interval#info=devDependencies)
 
 Safe React wrapper for setInterval
 
 
-![React Interval](https://cdn.rawgit.com/nkbt/react-interval/master/src/example/react-interval.gif)
+![React Interval](./src/example/react-interval.gif)
 
 
 ## Installation
 
-### npm
+### NPM
 
 ```sh
-npm install --save react-interval
+npm install --save react react-interval
 ```
 
-### bower
+Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
+
+### Bower:
 ```sh
-bower install --save react-interval
+bower install --save https://npmcdn.com/react-interval/bower.zip
 ```
+
+or in `bower.json`
+
+```json
+{
+  "dependencies": {
+    "react-interval": "https://npmcdn.com/react-interval/bower.zip"
+  }
+}
+```
+
+then include as
+```html
+<script src="bower_components/react/react.js"></script>
+<script src="bower_components/react-interval/build/react-interval.js"></script>
+```
+
+
+### 1998 Script Tag:
+```html
+<script src="https://npmcdn.com/react/dist/react.js"></script>
+<script src="https://npmcdn.com/react-interval/build/react-interval.js"></script>
+(Module exposed as `ReactInterval`)
+```
+
 
 ## Demo
 
@@ -42,16 +69,11 @@ bower install --save react-interval
 Start counting on render
 
 ```js
-import React from 'react';
 import ReactInterval from 'react-interval';
 
 const App = React.createClass({
   getInitialState() {
     return {count: 0};
-  },
-
-  inc() {
-    this.setState({count: this.state.count + 1});
   },
 
   render() {
@@ -60,7 +82,8 @@ const App = React.createClass({
     return (
       <div>
         {count}
-        <ReactInterval timeout={1000} enabled={true} callback={this.inc} />
+        <ReactInterval timeout={1000} enabled={true}
+          callback={() => this.setState({count: this.state.count + 1})} />
       </div>
     );
   }
@@ -72,6 +95,7 @@ Chang timeout on the fly, start and stop counting
 
 ```js
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ReactInterval from 'react-interval';
 
 const App = React.createClass({
@@ -83,16 +107,13 @@ const App = React.createClass({
     };
   },
 
-  inc() {
-    this.setState({count: this.state.count + 1});
-  },
-
   render() {
     const {timeout, enabled, count} = this.state;
 
     return (
       <div>
-        <ReactInterval {...{timeout, enabled}} callback={this.inc} />
+        <ReactInterval {...{timeout, enabled}}
+          callback={() => this.setState({count: this.state.count + 1})} />
 
         <input type="number" step="200" min="200" max="5000" value={this.state.timeout}
           onChange={({target: {value}}) => this.setState({timeout: parseInt(value, 10)})} />&nbsp;
@@ -108,6 +129,10 @@ const App = React.createClass({
     );
   }
 });
+
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
+ReactDOM.render(<App />, appRoot);
 ```
 
 ## Options
@@ -130,22 +155,34 @@ Timeout before each `callback` call
 
 ## Development and testing
 
+Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+Should be ok with Node 4, but not guaranteed.
+
+To run example covering all `ReactInterval` features, use `npm start`, which will compile `src/example/Example.js`
+
 ```bash
+git clone git@github.com:nkbt/react-interval.git
+cd react-interval
 npm install
 npm start
-```
 
-Then
-
-```bash
+# then
 open http://localhost:8080
 ```
 
 ## Tests
 
-Only UI tests for now, see [demo](http://nkbt.github.io/react-interval/example)
+```bash
+npm test
 
+# to run tests in watch mode for development
+npm run test:dev
+
+# to generate test coverage (./reports/coverage)
+npm run test:cov
+```
 
 ## License
 
 MIT
+

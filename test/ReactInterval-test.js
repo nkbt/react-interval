@@ -1,19 +1,7 @@
-describe('ReactInterval', () => {
-  const ReactIntervalInjector = require('inject!../src/ReactInterval');
-  let mock, ReactInterval;
+import test from 'tape';
+import ReactInterval from '../src/ReactInterval';
 
-
-  beforeEach(() => {
-    mock = jasmine.createSpyObj('mock', ['']);
-  });
-
-
-  beforeEach(() => ReactInterval = ReactIntervalInjector({
-    mock
-  }));
-
-
-  it('should be ok', () => {
-    expect(ReactInterval).toBeTruthy();
-  });
+test('ReactInterval', t => {
+  t.ok(ReactInterval instanceof Function, 'should be function');
+  t.end();
 });
