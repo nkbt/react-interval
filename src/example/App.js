@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactInterval from '..';
+import ReactInterval from '../ReactInterval';
 
 
 const App = React.createClass({
@@ -12,17 +12,15 @@ const App = React.createClass({
   },
 
 
-  inc() {
-    this.setState({count: this.state.count + 1});
-  },
-
-
   render() {
     const {timeout, enabled, count} = this.state;
 
     return (
       <div>
-        <ReactInterval {...{timeout, enabled}} callback={this.inc} />
+        <h1>ReactInterval</h1>
+
+        <ReactInterval {...{timeout, enabled}}
+          callback={() => this.setState({count: this.state.count + 1})} />
 
         <input type="number" step="200" min="200" max="5000" value={this.state.timeout}
           onChange={({target: {value}}) => this.setState({timeout: parseInt(value, 10)})} />
