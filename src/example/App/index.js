@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactInterval from '../ReactInterval';
+import ReactInterval from '../../ReactInterval';
+import {name} from '../../../package.json';
 
 
 const App = React.createClass({
@@ -17,7 +18,7 @@ const App = React.createClass({
 
     return (
       <div>
-        <h1>ReactInterval</h1>
+        <h1>{name}</h1>
 
         <ReactInterval {...{timeout, enabled}}
           callback={() => this.setState({count: this.state.count + 1})} />
