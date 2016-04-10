@@ -1,12 +1,12 @@
-# react-interval
+# react-interval [![npm](https://img.shields.io/npm/v/react-interval.svg?style=flat-square)](https://www.npmjs.com/package/react-interval)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
+[![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-interval.svg?style=shield)](https://circleci.com/gh/nkbt/react-interval)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/iq9ny700mnemkq6v?svg=true)](https://ci.appveyor.com/project/nkbt/react-interval)
-[![codecov.io](https://codecov.io/github/nkbt/react-interval/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-interval?branch=master)
-[![Dependency Status](https://david-dm.org/nkbt/react-interval.svg)](https://david-dm.org/nkbt/react-interval)
-[![devDependency Status](https://david-dm.org/nkbt/react-interval/dev-status.svg)](https://david-dm.org/nkbt/react-interval#info=devDependencies)
+[![CircleCI](https://img.shields.io/circleci/project/nkbt/react-interval.svg?style=flat-square&label=nix-build)](https://circleci.com/gh/nkbt/react-interval)
+[![AppVeyor](https://img.shields.io/appveyor/ci/nkbt/react-interval.svg?style=flat-square&label=win-build)](https://ci.appveyor.com/project/nkbt/react-interval)
+[![Coverage](https://img.shields.io/codecov/c/github/nkbt/react-interval.svg?style=flat-square)](https://codecov.io/github/nkbt/react-interval?branch=master)
+[![Dependencies](https://img.shields.io/david/nkbt/react-interval.svg?style=flat-square)](https://david-dm.org/nkbt/react-interval)
+[![Dev Dependencies](https://img.shields.io/david/dev/nkbt/react-interval.svg?style=flat-square)](https://david-dm.org/nkbt/react-interval#info=devDependencies)
 
 Safe React wrapper for setInterval
 
@@ -185,4 +185,3 @@ npm run test:cov
 ## License
 
 MIT
-
