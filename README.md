@@ -65,7 +65,7 @@ then include as
 
 ## Usage
 
-### Quicksart
+### Quickstart
 Start counting on render
 
 ```js
@@ -91,7 +91,7 @@ const App = React.createClass({
 ```
 
 ### Full example
-Chang timeout on the fly, start and stop counting
+Change timeout on the fly, start and stop counting
 
 ```js
 import React from 'react';
