@@ -1,5 +1,4 @@
 import React from 'react';
-import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
 
 
 const ReactInterval = React.createClass({
@@ -18,11 +17,6 @@ const ReactInterval = React.createClass({
   },
 
 
-  getInitialState() {
-    return {enabled: this.props.enabled};
-  },
-
-
   componentDidMount() {
     if (this.props.enabled) {
       this.start();
@@ -30,12 +24,24 @@ const ReactInterval = React.createClass({
   },
 
 
-  componentWillReceiveProps({enabled}) {
-    this.setState({enabled});
+  shouldComponentUpdate({timeout, callback, enabled}) {
+    return (
+      this.props.timeout !== timeout ||
+      this.props.callback !== callback ||
+      this.props.enabled !== enabled
+    );
   },
 
 
-  shouldComponentUpdate,
+  componentDidUpdate({enabled}) {
+    if (this.props.enabled !== enabled) {
+      if (this.props.enabled) {
+        this.start();
+      } else {
+        this.stop();
+      }
+    }
+  },
 
 
   componentWillUnmount() {
@@ -44,8 +50,10 @@ const ReactInterval = React.createClass({
 
 
   callback() {
-    this.props.callback();
-    this.start();
+    if (this.timer) {
+      this.props.callback();
+      this.start();
+    }
   },
 
 
@@ -57,15 +65,11 @@ const ReactInterval = React.createClass({
 
   stop() {
     clearTimeout(this.timer);
+    this.timer = null;
   },
 
 
   render() {
-    if (this.state.enabled) {
-      this.start();
-    } else {
-      this.stop();
-    }
     return false;
   }
 });
