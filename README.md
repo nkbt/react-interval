@@ -27,7 +27,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-interval/bower.zip
+bower install --save https://unpkg.com/react-interval/bower.zip
 ```
 
 or in `bower.json`
@@ -35,7 +35,7 @@ or in `bower.json`
 ```json
 {
   "dependencies": {
-    "react-interval": "https://npmcdn.com/react-interval/bower.zip"
+    "react-interval": "https://unpkg.com/react-interval/bower.zip"
   }
 }
 ```
@@ -49,8 +49,8 @@ then include as
 
 ### 1998 Script Tag:
 ```html
-<script src="https://npmcdn.com/react/dist/react.js"></script>
-<script src="https://npmcdn.com/react-interval/build/react-interval.js"></script>
+<script src="https://unpkg.com/react/dist/react.js"></script>
+<script src="https://unpkg.com/react-interval/build/react-interval.js"></script>
 (Module exposed as `ReactInterval`)
 ```
 
