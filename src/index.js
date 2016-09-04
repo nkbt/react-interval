@@ -1,5 +1,7 @@
 'use strict';
 
-const ReactInterval = require('./ReactInterval').ReactInterval;
+const ReactInterval = require('./Component').ReactInterval;
+
+ReactInterval.ReactInterval = ReactInterval;
 
 module.exports = ReactInterval;
