@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ReactInterval = React.createClass({
+export const ReactInterval = React.createClass({
   propTypes: {
     callback: React.PropTypes.func.isRequired,
     enabled: React.PropTypes.bool,
@@ -73,6 +73,3 @@ const ReactInterval = React.createClass({
     return false;
   }
 });
-
-
-export default ReactInterval;
