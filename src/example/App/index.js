@@ -16,12 +16,14 @@ const App = React.createClass({
 
   inc1() {
     const {count} = this.state;
+
     this.setState({count: count + 1});
   },
 
 
   inc10() {
     const {count} = this.state;
+
     this.setState({count: count + 10});
   },
 
@@ -33,18 +35,21 @@ const App = React.createClass({
 
   onToggleInterval() {
     const {enabled} = this.state;
+
     this.setState({enabled: !enabled});
   },
 
 
   onToggleDestroy() {
     const {destroy} = this.state;
+
     this.setState({destroy: !destroy});
   },
 
 
   onToggleCallback() {
     const {callback} = this.state;
+
     this.setState({callback: callback === this.inc1 ? this.inc10 : this.inc1});
   },
 
@@ -61,12 +66,12 @@ const App = React.createClass({
           {destroy ? null : <ReactInterval {...{timeout, enabled, callback}} />}
 
           <input
-            type="number"
-            step="200"
-            min="200"
             max="5000"
-            value={timeout}
-            onChange={this.onChangeTimeout} />
+            min="200"
+            onChange={this.onChangeTimeout}
+            step="200"
+            type="number"
+            value={timeout} />
           &nbsp;
 
           <button disabled={callback === this.inc1} onClick={this.onToggleCallback}>
