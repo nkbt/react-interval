@@ -103,53 +103,60 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var App = exports.App = function (_React$Component) {
   _inherits(App, _React$Component);
 
-  function App() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function App(props) {
     _classCallCheck(this, App);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    _this.onChangeTimeout = function (_ref) {
+      var value = _ref.target.value;
+
+      _this.setState({ timeout: parseInt(value, 10) });
+    };
+
+    _this.onToggleCallback = function () {
+      var callback = _this.state.callback;
+
+
+      _this.setState({ callback: callback === _this.inc1 ? _this.inc10 : _this.inc1 });
+    };
+
+    _this.onToggleDestroy = function () {
+      var destroy = _this.state.destroy;
+
+
+      _this.setState({ destroy: !destroy });
+    };
+
+    _this.onToggleInterval = function () {
+      var enabled = _this.state.enabled;
+
+
+      _this.setState({ enabled: !enabled });
+    };
+
+    _this.inc1 = function () {
+      var count = _this.state.count;
+
+
+      _this.setState({ count: count + 1 });
+    };
+
+    _this.inc10 = function () {
+      var count = _this.state.count;
+
+
+      _this.setState({ count: count + 10 });
+    };
+
+    _this.state = {
       callback: _this.inc1,
       destroy: false,
       enabled: false,
       timeout: 200,
       count: 0
-    }, _this.onChangeTimeout = function (_ref2) {
-      var value = _ref2.target.value;
-
-      _this.setState({ timeout: parseInt(value, 10) });
-    }, _this.onToggleCallback = function () {
-      var callback = _this.state.callback;
-
-
-      _this.setState({ callback: callback === _this.inc1 ? _this.inc10 : _this.inc1 });
-    }, _this.onToggleDestroy = function () {
-      var destroy = _this.state.destroy;
-
-
-      _this.setState({ destroy: !destroy });
-    }, _this.onToggleInterval = function () {
-      var enabled = _this.state.enabled;
-
-
-      _this.setState({ enabled: !enabled });
-    }, _this.inc1 = function () {
-      var count = _this.state.count;
-
-
-      _this.setState({ count: count + 1 });
-    }, _this.inc10 = function () {
-      var count = _this.state.count;
-
-
-      _this.setState({ count: count + 10 });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+    return _this;
   }
 
   _createClass(App, [{
