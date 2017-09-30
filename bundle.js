@@ -33,9 +33,6 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -63,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,25 +71,46 @@ module.exports = React;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__App__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_css__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__app_css__);
+/* global document */
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.App = undefined;
 
+
+
+
+var appRoot = document.createElement('div');
+
+appRoot.id = 'app';
+document.body.appendChild(appRoot);
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__App__["a" /* App */], null), appRoot);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = ReactDOM;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return App; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_Component__ = __webpack_require__(4);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Component = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -100,7 +118,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = exports.App = function (_React$Component) {
+
+
+
+var App = function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App(props) {
@@ -170,19 +191,19 @@ var App = exports.App = function (_React$Component) {
           count = _state.count;
 
 
-      return _react2.default.createElement(
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'app' },
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
           'react-interval'
         ),
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { style: { background: destroy ? '#f1f2f3' : '#f1fef3', padding: 10 } },
-          destroy ? null : _react2.default.createElement(_Component.ReactInterval, { timeout: timeout, enabled: enabled, callback: callback }),
-          _react2.default.createElement('input', {
+          destroy ? null : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__src_Component__["a" /* ReactInterval */], { timeout: timeout, enabled: enabled, callback: callback }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
             max: '5000',
             min: '200',
             onChange: this.onChangeTimeout,
@@ -190,25 +211,25 @@ var App = exports.App = function (_React$Component) {
             type: 'number',
             value: timeout }),
           '\xA0',
-          _react2.default.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
             { disabled: callback === this.inc1, onClick: this.onToggleCallback },
             '+1'
           ),
           '\xA0',
-          _react2.default.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
             { disabled: callback === this.inc10, onClick: this.onToggleCallback },
             '+10'
           ),
           '\xA0',
-          _react2.default.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
             { disabled: enabled, onClick: this.onToggleInterval },
             'Start'
           ),
           '\xA0',
-          _react2.default.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
             { disabled: !enabled, onClick: this.onToggleInterval },
             'Stop'
@@ -216,8 +237,8 @@ var App = exports.App = function (_React$Component) {
           '\xA0',
           count
         ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
           { onClick: this.onToggleDestroy },
           destroy ? 'Create Interval' : 'Destroy Interval'
@@ -227,68 +248,17 @@ var App = exports.App = function (_React$Component) {
   }]);
 
   return App;
-}(_react2.default.Component);
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = ReactDOM;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(3);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _App = __webpack_require__(1);
-
-__webpack_require__(2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* global document */
-
-var appRoot = document.createElement('div');
-
-appRoot.id = 'app';
-document.body.appendChild(appRoot);
-_reactDom2.default.render(_react2.default.createElement(_App.App, null), appRoot);
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ReactInterval = undefined;
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReactInterval; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -296,7 +266,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactInterval = exports.ReactInterval = function (_React$Component) {
+
+
+
+var ReactInterval = function (_React$Component) {
   _inherits(ReactInterval, _React$Component);
 
   function ReactInterval() {
@@ -321,6 +294,8 @@ var ReactInterval = exports.ReactInterval = function (_React$Component) {
     }, _this.stop = function () {
       clearTimeout(_this.timer);
       _this.timer = null;
+    }, _this.render = function () {
+      return false;
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -358,20 +333,20 @@ var ReactInterval = exports.ReactInterval = function (_React$Component) {
     value: function componentWillUnmount() {
       this.stop();
     }
-  }, {
-    key: 'render',
-    value: function render() {
-      return false;
-    }
   }]);
 
   return ReactInterval;
-}(_react2.default.Component);
-
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 ReactInterval.defaultProps = {
   enabled: false,
   timeout: 1000
 };
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
